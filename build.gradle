@@ -10,6 +10,7 @@ plugins {
 	id 'me.champeau.jmh' version '0.7.2' apply false
 	id 'me.champeau.mrjar' version '0.1.1'
 	id "net.ltgt.errorprone" version "3.1.0" apply false
+	id "org.owasp.dependencycheck"
 }
 
 ext {
@@ -85,6 +86,7 @@ configure([rootProject] + javaProjects) { project ->
 		// JSR-305 only used for non-required meta-annotations
 		compileOnly("com.google.code.findbugs:jsr305")
 		testCompileOnly("com.google.code.findbugs:jsr305")
+		implementation("org.owasp:dependency-check-gradle:9.1.0")
 	}
 
 	ext.javadocLinks = [
