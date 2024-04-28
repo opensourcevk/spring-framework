@@ -1,7 +1,7 @@
 plugins {
 	id 'java-gradle-plugin'
 	id 'checkstyle'
-	id 'org.owasp.dependencycheck'
+	id 'org.owasp.dependencycheck' version '9.1.0'
 }
 
 repositories {
